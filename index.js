@@ -1,4 +1,2 @@
-const difference = (a, b) => {
-  const s = new Set(b);
-  return a.filter((x) => !s.has(x));
-};
+const deepFlatten = (arr) =>
+  [].concat(...arr.map((v) => (Array.isArray(v) ? deepFlatten(v) : v)));
