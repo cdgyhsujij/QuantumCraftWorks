@@ -1,1 +1,9 @@
-const drop = (arr, n = 1) => arr.slice(n);
+function getIntersectionNode(headA, headB) {
+  let currA = headA;
+  let currB = headB;
+  while (currA !== currB) {
+    currA = currA ? currA.next : headB;
+    currB = currB ? currB.next : headA;
+  }
+  return currA;
+}
